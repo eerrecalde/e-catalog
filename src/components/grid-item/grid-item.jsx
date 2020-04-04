@@ -5,8 +5,8 @@ import Currency from '../currency/currency';
 import Favorite from '../favorite/favorite';
 
 const defaultTranslations = {
-  'catalog.item.external': 'View external NA',
-  'catalog.item.view': 'View12',
+  'catalog.item.external': 'Purchase',
+  'catalog.item.view': 'View Item',
 };
 
 function GridItem(props) {
