@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useState } from 'react';
 
 const useDarkMode = (isChecked, onPositive, onNegative, callback) => {
@@ -15,7 +16,7 @@ const useDarkMode = (isChecked, onPositive, onNegative, callback) => {
     callback(v);
   }
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     event.persist();
     const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
     setChecked(value);

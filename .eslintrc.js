@@ -18,7 +18,6 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'arrow-parens': [2, 'as-needed'],
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -26,5 +25,11 @@ module.exports = {
       },
     ],
     'operator-linebreak': ['error', 'after'],
+    'object-curly-newline': [
+      'error',
+      {
+        ImportDeclaration: 'never',
+      },
+    ],
   },
 };

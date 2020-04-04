@@ -5,7 +5,7 @@ import Favorite from './favorite';
 export default {
   title: 'Favorite',
   component: Favorite,
-  decorators: [story => <div style={{ padding: '1rem' }}>{story()}</div>],
+  decorators: [(story) => <div style={{ padding: '1rem' }}>{story()}</div>],
   excludeStories: /.*Data$/,
 };
 

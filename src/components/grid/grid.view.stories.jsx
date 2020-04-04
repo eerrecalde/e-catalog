@@ -29,7 +29,7 @@ export default {
   title: 'ItemsGridView',
   component: ItemsGridView,
   excludeStories: /.*Data$/,
-  decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
+  decorators: [(story) => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
 export const Default = () => <ItemsGridView items={defaultItemsGrid} />;
