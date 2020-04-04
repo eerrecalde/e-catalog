@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import useOnInputAction from '../../hooks/use-on-input-action';
+import useOnInputAction from '../hooks/use-on-input-action';
 
 function Favorite({ id, isChecked, onCheckChanged }) {
   function onChecked() {
