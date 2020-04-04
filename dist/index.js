@@ -28,4 +28,6 @@ var _grid = _interopRequireDefault(require("./grid/grid.view"));
 
 var _gridItem = _interopRequireDefault(require("./grid-item/grid-item"));
 
+require("./index.scss");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

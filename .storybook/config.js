@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react';
+import 'bootstrap/scss/bootstrap.scss';
 import '../src/components/index.scss';
 
 // automatically import all files ending in *.stories.js

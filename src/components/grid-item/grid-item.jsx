@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Currency from '../currency/currency';
 import Favorite from '../favorite/favorite';
+import './_grid-item.scss';
 
 const defaultTranslations = {
   'catalog.item.external': 'Purchase',
