@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from 'react';
 
-const useDarkMode = (isChecked, onPositive, onNegative, callback) => {
+const useOnInputAction = (isChecked, onPositive, onNegative, callback) => {
   const [checked, setChecked] = useState(isChecked);
   let alreadyTriggered = false;
 
@@ -34,4 +34,4 @@ const useDarkMode = (isChecked, onPositive, onNegative, callback) => {
   };
 };
 
-export default useDarkMode;
+export default useOnInputAction;
