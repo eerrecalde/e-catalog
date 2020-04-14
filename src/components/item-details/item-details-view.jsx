@@ -15,7 +15,7 @@ function ItemDetailsView({ title, price, description, url, imgUrl, videos }) {
       </div>
       <div>
         {videos.map((v) => (
-          <div className="responsive-video">
+          <div className="responsive-video" key={v}>
             <iframe
               title="video_vimeo"
               src={v}
