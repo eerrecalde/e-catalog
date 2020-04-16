@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import NoMatch from './views/not-found';
 
 // import { withAuthenticator } from 'aws-amplify-react';
 
@@ -8,10 +9,10 @@ import { routes } from './routes';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div>
         <nav className="navbar mb-3 navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="#/">
             App
           </a>
           <button
@@ -33,7 +34,7 @@ function App() {
                   ''
                 ) : (
                   <li key={path} className="nav-item">
-                    <NavLink exact={path === '/'} className="nav-link" to={path}>
+                    <NavLink exact={path === '#/'} className="nav-link" to={path}>
                       {name}
                     </NavLink>
                   </li>
@@ -49,6 +50,9 @@ renders the first one that matches the current URL. */}
           {routes.map(({ path, component }) => (
             <Route exact={path === '/'} key={path} path={path} component={component} />
           ))}
+          <Route>
+            <NoMatch />
+          </Route>
         </Switch>
       </div>
     </Router>

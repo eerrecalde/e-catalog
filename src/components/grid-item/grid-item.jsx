@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Currency from '../currency/currency';
 import Favorite from '../favorite/favorite';
@@ -12,7 +13,15 @@ const defaultTranslations = {
 
 function GridItem(props) {
   const {
-    id, favorite, onCheckChanged, title, price, description, url, imgUrl, translations,
+    id,
+    favorite,
+    onCheckChanged,
+    title,
+    price,
+    description,
+    url,
+    imgUrl,
+    translations,
   } = props;
 
   const translationsObj = { ...defaultTranslations, ...translations };
@@ -33,12 +42,16 @@ function GridItem(props) {
       <div className="card-body">
         <div className="d-flex flex-column h-100">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">
-            {description}
-          </p>
-          {url ? (<a href={url}>{translationsObj['catalog.item.external']}</a>) : ''}
+          <p className="card-text">{description}</p>
+          {url ? <a href={url}>{translationsObj['catalog.item.external']}</a> : ''}
           <div className="card-text mb-0 pt-2 mt-auto d-flex justify-content-between">
-            <a href={`/item-view/${id}`}>{translationsObj['catalog.item.view']}</a>
+            <Link
+              to={{
+                pathname: `/item-view/${id}`,
+              }}
+            >
+              {translationsObj['catalog.item.view']}
+            </Link>
             <span>
               <Currency type="GBP" />
               {price || 0}

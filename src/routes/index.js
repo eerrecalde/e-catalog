@@ -6,7 +6,7 @@ import ItemUpdate from '../views/item-update';
 
 export const routes = [
   {
-    path: '/catalog/:id',
+    path: '/catalog/all',
     name: 'Catalog',
     component: Catalog,
   },
